@@ -5,13 +5,12 @@
     }
     let frequencyOfirstArray = frequencyOf(arr1);
     let frequencyOfSecondArray = frequencyOf(arr2);
-    console.log(frequencyOfirstArray,frequencyOfSecondArray)
     const keyOfFreqSecond = Object.keys(frequencyOfSecondArray);
-    const isSquareOfFirst = Object.keys(frequencyOfirstArray).reduce((acc, value) => {
+    return Object.keys(frequencyOfirstArray).reduce((acc, value) => {
         return frequencyOfirstArray[value] === frequencyOfSecondArray[value];
          
     },false);
-  return isSquareOfFirst;
+
 
 }
 
