@@ -1,13 +1,13 @@
 //same as ([1,2,3], [4,1,9])
 // 1 , 2 ,3 , 4,1,9
-function same(arr1,arr2){
+export function same(arr1,arr2){
     if(!(Array.isArray(arr1) && Array.isArray(arr2)) || (arr1.length !== arr2.length)){
      throw new Error('Invalid arguments passed');
     }
     let frequencyOfirstArray = frequencyOf(arr1);
     let frequencyOfSecondArray = frequencyOf(arr2);
     const keyOfFreqSecond = Object.keys(frequencyOfSecondArray);
-    const isSquareOfFirst = Object.keys(frequencyOfirstArray).reduce((key, index) => {
+    const isSquareOfFirst = Object.keys(frequencyOfirstArray).reduce((acc, key) => {
         return frequencyOfirstArray[key] === frequencyOfSecondArray[key * key];
          
     },false);
@@ -15,7 +15,7 @@ function same(arr1,arr2){
 
 }
 
-function frequencyOf(arr){
+export function frequencyOf(arr){
    if(!Array.isArray(arr)){
      throw new Error('Arguments passed are not arrays');
     }
@@ -25,4 +25,4 @@ function frequencyOf(arr){
     }, {});
 }
 
-console.log(same([1,2,3,2],[4,1,9,4]));
+console.log(same([1,2,3,7],[4,1,9,4]));

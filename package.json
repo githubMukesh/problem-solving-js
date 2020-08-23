@@ -2,5 +2,7 @@
   "name": "js-zrhk4z",
   "version": "0.0.0",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "eslint": "^7.7.0"
+  }
 }
