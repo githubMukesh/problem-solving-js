@@ -9,3 +9,4 @@ function countCharacter(str){
 
 const result = countCharacter('The number is 897775757');
 console.log(result);
+
