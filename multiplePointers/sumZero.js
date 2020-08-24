@@ -15,4 +15,21 @@ function sumZero(arr){
   }
 }
 
-console.log(sumZero([-3,-2,-1,0,1]));
+function sumZeroByJam(arr){
+  const startPointer = 0;
+  const endPointer = arr.length - 1 ;
+  while(startPointer < endPointer){
+     const sum = arr[startPointer] + arr[endPointer];
+     if(sum === 0){
+       return [arr[startPointer], arr[endPointer]];
+     }
+     else if(sum > 0){
+        endPointer -=  1;
+     } else {
+       startPointer += 1;
+     }
+  }
+}
+
+
+console.log(sumZeroByJam([-3,-2,-1,0,1,2]));
