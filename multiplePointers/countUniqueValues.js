@@ -13,4 +13,6 @@ function countUniqueValues(arr){
   }
   return count;
 }
-countUniqueValues('');
+
+
+console.log(countUniqueValues([1,1,1,2,3,4,5,6]));
